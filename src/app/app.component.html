@@ -1,0 +1,10 @@
+
+<div class="card" style="float: left; width: 150px; height: 250px; margin: 10px;" *ngFor="let item of result">
+  <img class="card-img-top" src="{{item.image_background}}">
+  <img style="z-index: 99999; width: 60px; height: 60px;position: absolute; margin-top: 40px; margin-left: 40px;" src="{{item.image}}">
+  <div class="card-body" style="background-color: white; z-index: 1000;">
+    <br>
+    <p style="text-align: center; font-weight: bold;">{{item.name}}</p>
+    <p>Games: {{item.games_count}}</p>
+  </div>  
+</div>
