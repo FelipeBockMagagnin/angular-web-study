@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GamesService } from 'src/providers/games.service';
+import { GamesService } from 'src/services/games.service';
 import { GamesModule } from 'src/pages/games/games.module';
 import { CreatorsComponent } from '../pages/creators/creators.component';
 

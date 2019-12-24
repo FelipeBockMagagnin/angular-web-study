@@ -1,5 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { GamesService } from 'src/providers/games.service';
+import { GamesService } from 'src/services/games.service';
 
 @Component({
   selector: 'app-games',

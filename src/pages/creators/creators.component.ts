@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CreatorsService} from '../../providers/creators.service'
+import { CreatorsService} from '../../services/creators.service'
 
 
 @Component({
