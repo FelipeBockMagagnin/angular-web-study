@@ -1,17 +1,19 @@
-<div style="float: left; border: black 1px solid; margin: 10px" *ngFor="let item of games.results">
-    {{item.name}}
-    <br>
-    {{item.released}}
-    <br>
-    <img src="{{item.background_image}}" style="width: 50px; height: 50px;">
-    {{item.rating}}
-    <br>
-    {{item.ratings_count}}
-    <br>
-    {{item.metacritc}}
-    <br>
-    {{item.reviews_count}}
-    <br>
-    {{item.playtime}}
-  
+
+  <div *ngFor="let item of games.results" 
+  style="display: inline-block; width: 200px; margin: 10px;">
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="card-image">
+          <img style="height: 120px;" src="{{item.background_image}}">
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">remove_red_eye</i></a>
+        </div>
+        <div class="card-content" style="height: 240px;">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+          
