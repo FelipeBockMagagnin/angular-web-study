@@ -13,5 +13,10 @@ export class GamesService {
   async getgames(): Promise<any> {
     const response = await this.http.get('https://api.rawg.io/api/games').toPromise();
     return response;
+  }   
+  
+  async getgamebyid(id): Promise<any> {
+    const response = await this.http.get('https://api.rawg.io/api/games/' + id).toPromise();
+    return response;
   }    
 }

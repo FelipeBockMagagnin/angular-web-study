@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { GamesService } from 'src/services/games.service';
 import { GamesModule } from 'src/pages/games/games.module';
 import { CreatorsComponent } from '../pages/creators/creators.component';
+import { GameDetailComponent } from '../pages/game-detail/game-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreatorsComponent
+    CreatorsComponent,
+    GameDetailComponent
   ],
   imports: [
     BrowserModule,
