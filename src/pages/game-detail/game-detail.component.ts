@@ -10,24 +10,33 @@ import { GamesService } from 'src/services/games.service';
 })
 export class GameDetailComponent implements OnInit {
 
-  a;
-  game = '';
+  gameSlug = '';
+  gameDetails;
 
   constructor(public route: ActivatedRoute,
               public router: Router,
               public gameService: GamesService) { }
 
   async ngOnInit() {
-    this.a = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.game += params.get('slug'))
-    ).subscribe(aa => {
-      this.a = this.gameService.getgamebyid(this.game).then(a =>
+    this.route.paramMap.subscribe( paramMap =>
       {
-        console.log(a);
-      });
-    });
+        this.gameSlug = paramMap.get('slug');      
+        this.gameService.getgamebyid(this.gameSlug).then(data => {
+          this.gameDetails = data;
+          console.log(this.gameDetails);
+        });
+      })
 
+
+    // this.route.paramMap.pipe(
+    //   switchMap((params: ParamMap) =>
+    //     this.game += params.get('slug'))
+    // ).subscribe(aa => {
+    //   this.gameService.getgamebyid(this.game).then(a =>
+    //   {
+    //     console.log(a);
+    //   });
+    // });
   }
 
 }
