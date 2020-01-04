@@ -8,14 +8,16 @@ import { GamesService } from 'src/services/games.service';
 })
 export class GamesComponent implements OnInit {
 
-  games;
+  results = [];
 
   constructor(public gameservice: GamesService) {
-    console.log('a');
-   }
 
-  async ngOnInit() {
-    this.games = await this.gameservice.getgames();
   }
 
+  ngOnInit() {
+    this.gameservice.getgames().then(game =>{
+      this.results = game['results'];
+      console.log("Result" , this.results);
+    });
+  }
 }

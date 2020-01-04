@@ -24,6 +24,8 @@ export class GameDetailComponent implements OnInit {
         this.gameService.getgamebyid(this.gameSlug).then(data => {
           this.gameDetails = data;
           console.log(this.gameDetails);
+          (document.getElementById('container') as HTMLDivElement).style.backgroundColor = '#' + this.gameDetails.dominant_color;
+          console.log(this.gameDetails.dominant_color);
         });
       })
 

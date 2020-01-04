@@ -1,15 +1,31 @@
-<img src="{{gameDetails.background_image}}" style="width: 100%; position: absolute; z-index: -1;" >
+<div id="container">
 
-<div class="z-depth-2 container" style="background: #ffffffff; margin-top: 50px; border-radius: 10px; padding: 5px;">
-    <h5 class="center-align"><b>{{gameDetails.name}}</b></h5>
-    
-    <!-- <img src="{{gameDetails.background_image_additional}}"> -->
+    <div class="z-depth-2 container">
+        <div class="row" style="width: 100%;">
+            <div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{gameDetails.background_image}}">
+                        <span class="card-title">{{gameDetails.name}}</span>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align"><b></b></h5>
 
-    <p><b>Lançamento:</b> {{gameDetails.released}}</p>
-    <p><b>Atualizado:</b> {{gameDetails.updated}}</p>
+                        <!-- <img src="{{gameDetails.background_image_additional}}"> -->
 
-    <p><b>Sites:</b> {{gameDetails.website}}</p>
+                        <p><b>Lançamento:</b> {{gameDetails.released}}</p>
+                        <p><b>Atualizado:</b> {{gameDetails.updated}}</p>
 
-    <p><b>Detalhes:</b> {{gameDetails.description}}</p>
-    
+                        <p><b>Sites:</b> {{gameDetails.website}}</p>
+
+                        <p><b>Detalhes:</b> {{gameDetails.description}}</p>
+
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,10 +1,10 @@
-<div *ngFor="let item of games.results" 
+<div *ngFor="let item of results" 
   style="display: inline-block; width: 200px; margin: 10px;">
     <div class="col s12 m3">
       <div class="card">
         <div class="card-image">
           <img style="height: 120px;" src="{{item.background_image}}">
-          <a class="btn-floating halfway-fab waves-effect waves-light red">
+          <a [routerLink]="['/game', item.slug]" class="btn-floating halfway-fab waves-effect waves-light red">
             <i class="material-icons">remove_red_eye</i>
           </a>
         </div>

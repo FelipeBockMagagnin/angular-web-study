@@ -11,14 +11,12 @@ export class AppComponent {
     title = 'GamesPlayTime';
     response: any;
     result: any;
-    games: any;
 
     constructor(public game: GamesService) {
         
     }
 
     async ngOnInit() {
-        this.games = await this.game.getgames();
-        console.log('games:' , this.games);
+
     }
 }
