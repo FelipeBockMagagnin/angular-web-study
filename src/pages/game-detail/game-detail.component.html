@@ -1,5 +1,4 @@
 <div id="container">
-
     <div class="z-depth-2 container">
         <div class="row" style="width: 100%;">
             <div>
@@ -16,9 +15,20 @@
                         <p><b>Lançamento:</b> {{gameDetails.released}}</p>
                         <p><b>Atualizado:</b> {{gameDetails.updated}}</p>
 
-                        <p><b>Sites:</b> {{gameDetails.website}}</p>
+                        <p><b>Sites:</b>{{gameDetails.website}}</p>
 
-                        <p><b>Detalhes:</b> {{gameDetails.description}}</p>
+                        <p><b>Metacritic:</b> {{gameDetails.metacritic}}</p>
+                        <p><b>Rating:</b> {{gameDetails.rating}}</p>
+                        <p><b>Tempo de Jogo:</b> {{gameDetails.playtime}}</p>
+
+                        <p><b>Reddit:</b> {{gameDetails.reddit_url}}</p>
+                        <p><b>Numero de reviews: </b> {{gameDetails.ratings_count}} </p>
+                        
+                        
+                        <div *ngFor="let item of gameDetails.platforms">
+                            Disponivel em: {{item.platform.name}}
+                        </div>
+                        <div><b>Descrição: </b> {{gameDetails.description}}</div>
 
                     </div>
                     <div class="card-action">
